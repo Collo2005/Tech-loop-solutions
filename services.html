@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Techloop Solutions</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com/3.4.16 "></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b50c9', // Blue
+                        secondary: '#6c3cb5', // Purple
+                        tertiary: '#64748b'  // Grey
+                    },
+                    borderRadius: {
+                        'button': '8px'
+                    }
+                }
+            }
+        };
+    </script>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat :wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon @4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #1f2937;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #3b50c9, #6c3cb5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+
+<!-- Header -->
+<header class="w-full bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="#" class="text-2xl font-bold">
+            <span class="text-primary">Tech</span><span class="text-secondary">loop</span>
+        </a>
+        <nav class="hidden md:flex items-center space-x-8">
+            <a href="/" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+            <a href="/about" class="text-gray-700 hover:text-primary transition-colors">About Us</a>
+            <a href="/services" class="text-primary font-medium">Our Services</a>
+            <a href="/portfolio" class="text-gray-700 hover:text-primary transition-colors">Portfolio</a>
+            <a href="/contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+        </nav>
+        <div class="md:hidden w-8 h-8 flex items-center justify-center">
+            <i class="ri-menu-line ri-lg"></i>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-primary to-secondary text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">What We Offer</h1>
+        <p class="text-white text-lg max-w-2xl mx-auto mb-8">We provide accessible, affordable digital and internet services that empower rural communities, job seekers, and small businesses across Kenya.</p>
+        <a href="#internet-services" class="inline-block bg-white text-primary px-6 py-3 !rounded-button font-medium hover:bg-blue-50 transition-colors whitespace-nowrap">Explore Our Services</a>
+    </div>
+</section>
+
+<!-- Internet Services Section -->
+<section id="internet-services" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4 gradient-text">Internet Access Services</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-6">Connecting underserved areas with reliable and affordable internet access — because opportunity should never be limited by location.</p>
+            <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                    <i class="ri-wifi-line ri-xl text-primary"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Rural Wi-Fi Hotspots</h3>
+                <p class="text-gray-600 mb-4">Affordable internet hubs in marketplaces, schools, and community centers across rural Kenya.</p>
+                <a href="#" class="text-primary font-medium inline-flex items-center">
+                    Learn More 
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+            <!-- Service 2 -->
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                    <i class="ri-calendar-check-line ri-xl text-primary"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Flexible Internet Plans</h3>
+                <p class="text-gray-600 mb-4">Weekly and monthly data plans tailored to individual needs and budgets in low-income communities.</p>
+                <a href="#" class="text-primary font-medium inline-flex items-center">
+                    Learn More 
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+            <!-- Service 3 -->
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                    <i class="ri-group-line ri-xl text-primary"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Community Awareness Campaigns</h3>
+                <p class="text-gray-600 mb-4">Educational programs on safe and effective use of the internet for students, entrepreneurs, and local leaders.</p>
+                <a href="#" class="text-primary font-medium inline-flex items-center">
+                    Learn More 
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Digital Services Section -->
+<section id="digital-services" class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4 gradient-text">Digital Empowerment Services</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-6">Empowering individuals and professionals with essential online tools to unlock career and business opportunities.</p>
+            <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-file-text-line ri-lg text-secondary"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">CV & Resume Writing</h3>
+                <p class="text-gray-600 mb-4">Professional CV creation and optimization for job seekers in rural areas.</p>
+                <a href="#" class="text-secondary font-medium inline-flex items-center text-sm">
+                    Learn More 
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+            <!-- Service 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-linkedin-box-line ri-lg text-secondary"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">LinkedIn Profile Setup</h3>
+                <p class="text-gray-600 mb-4">Complete LinkedIn profile creation to connect rural professionals with global opportunities.</p>
+                <a href="#" class="text-secondary font-medium inline-flex items-center text-sm">
+                    Learn More 
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+            <!-- Service 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-share-fill ri-lg text-secondary"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Social Media Management</h3>
+                <p class="text-gray-600 mb-4">Helping small businesses build an online presence through strategic social media setup and management.</p>
+                <a href="#" class="text-secondary font-medium inline-flex items-center text-sm">
+                    Learn More 
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+            <!-- Service 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-shield-user-line ri-lg text-secondary"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Personal Branding Support</h3>
+                <p class="text-gray-600 mb-4">Guidance on building a strong digital identity for entrepreneurs, freelancers, and job seekers.</p>
+                <a href="#" class="text-secondary font-medium inline-flex items-center text-sm">
+                    Learn More 
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Software & Business Tools Section -->
+<section id="software-services" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4 gradient-text">Software & Business Solutions</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-6">Custom-built websites, software systems, and digital tools designed to help institutions and entrepreneurs thrive online.</p>
+            <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-layout-line ri-lg text-tertiary"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Institutional Websites</h3>
+                <p class="text-gray-600 mb-4">Custom-designed websites for schools, NGOs, and community organizations.</p>
+                <a href="#" class="text-tertiary font-medium inline-flex items-center text-sm">
+                    Learn More 
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+            <!-- Service 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-account-circle-line ri-lg text-tertiary"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Profile Websites</h3>
+                <p class="text-gray-600 mb-4">Professional personal websites for freelancers, artists, consultants, and more.</p>
+                <a href="#" class="text-tertiary font-medium inline-flex items-center text-sm">
+                    Learn More 
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+            <!-- Service 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-store-2-line ri-lg text-tertiary"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Business Systems</h3>
+                <p class="text-gray-600 mb-4">Inventory tracking, POS, CRM, and other systems tailored for small businesses and cooperatives.</p>
+                <a href="#" class="text-tertiary font-medium inline-flex items-center text-sm">
+                    Learn More 
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+            <!-- Service 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-computer-line ri-lg text-tertiary"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Website Development</h3>
+                <p class="text-gray-600 mb-4">Mobile-friendly, fast-loading websites built for businesses in rural Kenya.</p>
+                <a href="#" class="text-tertiary font-medium inline-flex items-center text-sm">
+                    Learn More 
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+            <!-- Service 5 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-tools-line ri-lg text-tertiary"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Software Installation</h3>
+                <p class="text-gray-600 mb-4">Setup and configuration of office productivity, accounting, and business management tools.</p>
+                <a href="#" class="text-tertiary font-medium inline-flex items-center text-sm">
+                    Learn More 
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+            <!-- Service 6 -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-macbook-line ri-lg text-tertiary"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Tech Support</h3>
+                <p class="text-gray-600 mb-4">Ongoing maintenance and support for software, hardware, and digital tools used by clients.</p>
+                <a href="#" class="text-tertiary font-medium inline-flex items-center text-sm">
+                    Learn More 
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Need a Service? Let’s Build Together!</h2>
+        <p class="text-white text-lg mb-8 max-w-2xl mx-auto">Whether it's connecting your community, digitizing your business, or boosting your career — we’re here to help you take the next step.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="/contact" class="bg-white text-primary px-6 py-3 !rounded-button font-medium hover:bg-blue-50 transition-colors whitespace-nowrap">Get Started Today</a>
+            <a href="/contact" class="bg-transparent border border-white text-white px-6 py-3 !rounded-button font-medium hover:bg-white hover:text-primary transition-colors whitespace-nowrap">Request a Quote</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <!-- Company Info -->
+            <div>
+                <h3 class="text-xl font-bold mb-6">Tech<span class="text-primary">loop</span></h3>
+                <p class="text-gray-400 mb-6">Empowering rural communities with innovative digital solutions since 2023.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="ri-facebook-fill text-white"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="ri-twitter-fill text-white"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="ri-linkedin-fill text-white"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                <ul class="space-y-3">
+                    <li><a href="/" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                    <li><a href="/about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="/services" class="text-gray-400 hover:text-white transition-colors">Our Services</a></li>
+                    <li><a href="/portfolio" class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
+                    <li><a href="/contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i class="ri-map-pin-line text-primary mt-1 mr-3"></i>
+                        <span class="text-gray-400">Nairobi, Kenya</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="ri-phone-line text-primary mr-3"></i>
+                        <span class="text-gray-400">+254 700 000 000</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="ri-mail-line text-primary mr-3"></i>
+                        <span class="text-gray-400">info@techloopsolutions.co.ke</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Newsletter -->
+            <div>
+                <h3 class="text-lg font-semibold mb-6">Stay Updated</h3>
+                <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates and success stories.</p>
+                <form class="flex flex-col space-y-3">
+                    <input type="email" placeholder="Your email address" class="w-full px-4 py-3 bg-gray-800 text-white border-none !rounded-button focus:ring-2 focus:ring-primary">
+                    <button type="submit" class="bg-primary text-white px-4 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Subscribe Now</button>
+                </form>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-gray-800 text-center">
+            <p class="text-gray-500">© 2025 Techloop Solutions. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-500 hover:text-gray-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="text-gray-500 hover:text-gray-400 transition-colors">Terms of Service</a>
+                <a href="#" class="text-gray-500 hover:text-gray-400 transition-colors">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -503,12 +503,26 @@
         </div>
         <div class="flex flex-col lg:flex-row gap-12">
             <div class="lg:w-1/2">
-                <form class="flex flex-col space-y-3">
-                    <input type="text" placeholder="Your Name" class="w-full px-4 py-3 bg-gray-800 text-white border-none !rounded-button focus:ring-2 focus:ring-primary">
-                    <input type="email" placeholder="Your Email" class="w-full px-4 py-3 bg-gray-800 text-white border-none !rounded-button focus:ring-2 focus:ring-primary">
-                    <textarea rows="4" placeholder="Your Message" class="w-full px-4 py-3 bg-gray-800 text-white border-none !rounded-button focus:ring-2 focus:ring-primary"></textarea>
-                    <button type="submit" class="bg-primary text-white px-4 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Send Message</button>
-                </form>
+                
+                    <form action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="c534bb21-7167-487b-a03e-5ea6737ce591">
+
+    <!-- Form Inputs. Each input must have a name="" attribute -->
+    <input type="text" placeholder="Your Name" name="name" required class="w-full px-4 py-3 bg-gray-800 text-white border-none !rounded-button focus:ring-2 focus:ring-primary">
+    <input type="email" placeholder="Your Email"name="email" required class="w-full px-4 py-3 bg-gray-800 text-white border-none !rounded-button focus:ring-2 focus:ring-primary">
+    <textarea name="message" placeholder="Your Message" required class="w-full px-4 py-3 bg-gray-800 text-white border-none !rounded-button focus:ring-2 focus:ring-primary"></textarea>
+
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <!-- Custom Confirmation / Success Page -->
+    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+    <button type="submit" class="bg-primary text-white px-4 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Submit Form</button>
+
+</form>
             </div>
             <div class="lg:w-1/2">
                 <ul class="space-y-6">

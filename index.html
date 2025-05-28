@@ -12,6 +12,8 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
+ <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+
     <!-- Tailwind Config -->
     <script>
         tailwind.config = {
@@ -84,22 +86,24 @@
 <body class="min-h-screen bg-white">
 
 <!-- Header -->
+<!-- ...existing code... -->
 <header class="w-full bg-white shadow-sm sticky top-0 z-50">
     <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="#"class="text-2xl font-['Pacifico'] text-primary" >
-         <span class="text-primary">Tech-</span><span class="text-secondary">loop</span>
-            
+        <a href="#" class="text-2xl font-['Pacifico'] text-primary">
+            <span class="text-primary">Tech-</span><span class="text-secondary">loop</span>
         </a>
-        <nav class="hidden md:flex items-center space-x-8">
-            <a href="#home" class="text-primary font-medium">Home</a>
-            <a href="About us.html" class="text-gray-700 hover:text-primary transition-colors">About Us</a>
-            <a href="#services" class="text-gray-700 hover:text-primary transition-colors">Services</a>
-            <a href="#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
-            <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
-        </nav>
-        <div class="md:hidden w-8 h-8 flex items-center justify-center">
+        <!-- Hamburger Button -->
+        <button id="menuBtn" class="md:hidden w-8 h-8 flex items-center justify-center focus:outline-none" aria-label="Open Menu">
             <i class="ri-menu-line ri-lg"></i>
-        </div>
+        </button>
+        <!-- Navigation Links -->
+        <nav id="mainNav" class="hidden md:flex flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none z-50 md:items-center md:space-x-8 space-y-0 md:space-y-0">
+            <a href="index.html" class="block px-6 py-3 text-gray-700 hover:text-primary transition-colors md:inline md:px-0 md:py-0">Home</a>
+            <a href="About us.html" class="block px-6 py-3 text-gray-700 hover:text-primary transition-colors md:inline md:px-0 md:py-0">About Us</a>
+            <a href="services.html" class="block px-6 py-3 text-gray-700 hover:text-primary transition-colors md:inline md:px-0 md:py-0">Services</a>
+            <a href="projects.html" class="block px-6 py-3 text-gray-700 hover:text-primary transition-colors md:inline md:px-0 md:py-0">Projects</a>
+            <a href="contact.html" class="block px-6 py-3 text-gray-700 hover:text-primary transition-colors md:inline md:px-0 md:py-0">Contact</a>
+        </nav>
     </div>
 </header>
 
@@ -172,34 +176,34 @@
             <h3 class="text-2xl font-bold mb-8 text-center">Internet Services</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                    <!-- <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                         <i class="ri-wifi-line ri-xl text-primary"></i>
-                    </div>
-                    <img src="images/Rural Wi-Fi Hotspots.jpg" alt="">
+                    </div> -->
+                    <img src="images/Rural Wi-Fi Hotspots.jpg" alt="Rural Wi-Fi Hotspots" class="w-full h-56 object-cover rounded-lg mb-6">
                     <h3 class="text-xl font-semibold mb-3">Rural Wi-Fi Hotspots</h3>
                     <p class="text-gray-600 mb-4">Affordable, reliable internet access points strategically located to serve community needs in areas with limited connectivity.</p>
-                    <a href="#" class="text-primary font-medium flex items-center">
+                    <!-- <a href="#" class="text-primary font-medium flex items-center">
                         Learn More 
                         <span class="w-5 h-5 flex items-center justify-center ml-1">
                             <i class="ri-arrow-right-line"></i>
                         </span>
-                    </a>
+                    </a> -->
                 </div>
                 <!-- Service 2 -->
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                    <!-- <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                         <i class="ri-base-station-line ri-xl text-primary"></i>
-                    </div>
-                    <img src="images/Community Hub.jpg" alt="">
+                    </div> -->
+                    <img src="images/Community Hub.jpg" alt="Community Internet Hubs" class="w-full h-56 object-cover rounded-lg mb-6">
                     <h3 class="text-xl font-semibold mb-3">Community Internet Hubs</h3>
                     <p class="text-gray-600 mb-4">Shared internet spaces equipped with computers and high-speed connectivity for research, education, and digital access.</p>
-                    <a href="#" class="text-primary font-medium flex items-center">
+                    <!-- <a href="#" class="text-primary font-medium flex items-center">
                         Learn More 
                         <span class="w-5 h-5 flex items-center justify-center ml-1">
                             <i class="ri-arrow-right-line"></i>
                         </span>
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>
@@ -208,49 +212,49 @@
             <h3 class="text-2xl font-bold mb-8 text-center">Digital Services</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                    <!-- <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
                         <i class="ri-file-text-line ri-xl text-secondary"></i>
-                    </div>
-                      <img src="images/cv.jpeg" alt="">
+                    </div> -->
+                    <img src="images/cv.jpeg" alt="CV & Resume Writing" class="w-full h-56 object-cover rounded-lg mb-6">
                     <h3 class="text-xl font-semibold mb-3">CV & Resume Writing</h3>
                     <p class="text-gray-600 mb-4">Professional CV creation and optimization services to help rural job seekers stand out in the competitive job market.</p>
-                    <a href="#" class="text-secondary font-medium flex items-center">
+                    <!-- <a href="#" class="text-secondary font-medium flex items-center">
                         Learn More 
                         <span class="w-5 h-5 flex items-center justify-center ml-1">
                             <i class="ri-arrow-right-line"></i>
                         </span>
-                    </a>
+                    </a> -->
                 </div>
                 <!-- Service 2 -->
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                    <!-- <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
                         <i class="ri-linkedin-box-line ri-xl text-secondary"></i>
-                    </div>
-                      <img src="images/linked in.jpg" alt="">
+                    </div> -->
+                    <img src="images/linked in.jpg" alt="LinkedIn Profile Setup" class="w-full h-56 object-cover rounded-lg mb-6">
                     <h3 class="text-xl font-semibold mb-3">LinkedIn Profile Setup</h3>
                     <p class="text-gray-600 mb-4">Complete LinkedIn profile creation and optimization, connecting rural professionals to global opportunities.</p>
-                    <a href="#" class="text-secondary font-medium flex items-center">
+                    <!-- <a href="#" class="text-secondary font-medium flex items-center">
                         Learn More 
                         <span class="w-5 h-5 flex items-center justify-center ml-1">
                             <i class="ri-arrow-right-line"></i>
                         </span>
-                    </a>
+                    </a> -->
                 </div>
                 <!-- Service 3 -->
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                    <!-- <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
                         <i class="ri-mail-send-line ri-xl text-secondary"></i>
-                    </div>
-                      <img src="images/Digital Communications.jpg" alt="">
+                    </div> -->
+                    <img src="images/Digital Communications.jpg" alt="Digital Communications" class="w-full h-56 object-cover rounded-lg mb-6">
                     <h3 class="text-xl font-semibold mb-3">Digital Communications</h3>
                     <p class="text-gray-600 mb-4">Email setup, digital document creation, and online form assistance for individuals and small businesses.</p>
-                    <a href="#" class="text-secondary font-medium flex items-center">
+                    <!-- <a href="#" class="text-secondary font-medium flex items-center">
                         Learn More 
                         <span class="w-5 h-5 flex items-center justify-center ml-1">
                             <i class="ri-arrow-right-line"></i>
                         </span>
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>
@@ -259,64 +263,79 @@
             <h3 class="text-2xl font-bold mb-8 text-center">Software Solutions</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center mb-6">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                    <!-- <div class="w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center mb-6">
                         <i class="ri-layout-line ri-xl text-tertiary"></i>
-                    </div>
-                  <img src="images/Business Websites.jpg" alt="">
+                    </div> -->
+                    <img src="images/Business Websites.jpg" alt="Business Websites" class="w-full h-56 object-cover rounded-lg mb-6">
                     <h3 class="text-xl font-semibold mb-3">Business Websites</h3>
                     <p class="text-gray-600 mb-4">Custom, mobile-friendly websites for rural businesses, designed to work efficiently even in areas with limited bandwidth.</p>
-                    <a href="#" class="text-tertiary font-medium flex items-center">
+                    <!-- <a href="#" class="text-tertiary font-medium flex items-center">
                         Learn More 
                         <span class="w-5 h-5 flex items-center justify-center ml-1">
                             <i class="ri-arrow-right-line"></i>
                         </span>
-                    </a>
+                    </a> -->
                 </div>
                 <!-- Service 2 -->
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center mb-6">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                    <!-- <div class="w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center mb-6">
                         <i class="ri-store-2-line ri-xl text-tertiary"></i>
-                    </div>
-                    <img src="images/Business Systems.jpg" alt="">
+                    </div> -->
+                    <img src="images/Business Systems.jpg" alt="Business Systems" class="w-full h-56 object-cover rounded-lg mb-6">
                     <h3 class="text-xl font-semibold mb-3">Business Systems</h3>
                     <p class="text-gray-600 mb-4">Inventory management, point-of-sale systems, and other business tools customized for rural entrepreneurs.</p>
-                    <a href="#" class="text-tertiary font-medium flex items-center">
+                    <!-- <a href="#" class="text-tertiary font-medium flex items-center">
                         Learn More 
                         <span class="w-5 h-5 flex items-center justify-center ml-1">
                             <i class="ri-arrow-right-line"></i>
                         </span>
-                    </a>
+                    </a> -->
                 </div>
                 <!-- Service 3 -->
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center mb-6">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+                    <!-- <div class="w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center mb-6">
                         <i class="ri-graduation-cap-line ri-xl text-tertiary"></i>
-                    </div>
-                    <img src="images/Tech Education.jpg" alt="">
+                    </div> -->
+                    <img src="images/Tech Education.jpg" alt="Tech Education" class="w-full h-56 object-cover rounded-lg mb-6">
                     <h3 class="text-xl font-semibold mb-3">Tech Education</h3>
                     <p class="text-gray-600 mb-4">Practical technology training programs designed specifically for rural communities with limited prior tech exposure.</p>
-                    <a href="#" class="text-tertiary font-medium flex items-center">
+                    <!-- <a href="#" class="text-tertiary font-medium flex items-center">
                         Learn More 
                         <span class="w-5 h-5 flex items-center justify-center ml-1">
                             <i class="ri-arrow-right-line"></i>
                         </span>
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>
+        <!-- 
+            Note: 
+            - Images are now set to occupy full width of their container and a fixed height for consistency.
+            - "Learn More" links and icon badges above images are commented out for future use.
+            - Add more service details or descriptions as your offerings expand.
+        -->
     </div>
 </section>
 
 <!-- Value Proposition Section -->
 <section class="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
     <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2">
-                <img src="images/techloop logo.png" alt="Rural tech transformation in Kenya" class="rounded-lg shadow-lg w-full h-auto object-cover">
+        <div class="flex flex-col md:flex-row items-stretch gap-12">
+            <div class="md:w-1/2 flex">
+                <img 
+                    src="images/techloop logo.png" 
+                    alt="Techloop Solutions Logo - Digital Empowerment for Rural Kenya" 
+                    class="rounded-lg shadow-lg w-full h-full object-cover bg-white"
+                    style="min-height: 100%; min-width: 100%;"
+                    loading="lazy"
+                >
             </div>
-            <div class="md:w-1/2">
-                <h2 class="text-3xl font-bold mb-6">Why Choose Techloop?</h2>
+            <div class="md:w-1/2 flex flex-col justify-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Why Choose Techloop?</h2>
+                <p class="text-gray-700 mb-6">
+                    Techloop Solutions is committed to bridging the digital divide in rural Kenya. We combine local knowledge, innovative technology, and a passion for community empowerment to deliver real, lasting impact.
+                </p>
                 <div class="space-y-6">
                     <div class="flex items-start">
                         <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center shrink-0 mt-1">
@@ -324,7 +343,7 @@
                         </div>
                         <div class="ml-4">
                             <h3 class="text-xl font-semibold mb-2">Local Expertise</h3>
-                            <p class="text-gray-600">Our team understands the unique challenges of rural Kenya and designs solutions specifically for local conditions.</p>
+                            <p class="text-gray-600">Our team understands the unique challenges of rural Kenya and designs solutions specifically for local conditions, ensuring relevance and effectiveness.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
@@ -333,7 +352,7 @@
                         </div>
                         <div class="ml-4">
                             <h3 class="text-xl font-semibold mb-2">Sustainable Approach</h3>
-                            <p class="text-gray-600">Our solutions are designed to be affordable, durable, and maintainable by local communities for long-term impact.</p>
+                            <p class="text-gray-600">Our solutions are affordable, durable, and maintainable by local communities, ensuring long-term benefits and minimal environmental impact.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
@@ -342,9 +361,23 @@
                         </div>
                         <div class="ml-4">
                             <h3 class="text-xl font-semibold mb-2">Comprehensive Solutions</h3>
-                            <p class="text-gray-600">We provide end-to-end digital empowerment, from connectivity to skills development and ongoing support.</p>
+                            <p class="text-gray-600">We offer end-to-end digital empowerment: reliable connectivity, digital services, tech education, and ongoing support for individuals and businesses.</p>
                         </div>
                     </div>
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center shrink-0 mt-1">
+                            <i class="ri-hand-heart-line ri-lg text-white"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-semibold mb-2">Community-Driven Impact</h3>
+                            <p class="text-gray-600">We partner with local leaders and organizations to ensure our projects address real needs and empower communities to thrive in the digital age.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <a href="#contact" class="inline-block bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap shadow">
+                        Get Started with Techloop
+                    </a>
                 </div>
             </div>
         </div>
@@ -494,6 +527,7 @@
 </section>
 
 <!-- Contact Section -->
+<!-- ...existing code... -->
 <section id="contact" class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
@@ -503,26 +537,38 @@
         </div>
         <div class="flex flex-col lg:flex-row gap-12">
             <div class="lg:w-1/2">
-                
-                    <form action="https://api.web3forms.com/submit" method="POST">
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5 bg-white p-8 rounded-lg shadow-md">
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="c534bb21-7167-487b-a03e-5ea6737ce591">
 
-    <!-- Replace with your Access Key -->
-    <input type="hidden" name="access_key" value="c534bb21-7167-487b-a03e-5ea6737ce591">
+                    <!-- Form Inputs. Each input must have a name="" attribute -->
+                    <div>
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                        <input id="name" type="text" name="name" required
+                            class="w-full px-4 py-3 bg-gray-100 text-gray-900 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:bg-white transition duration-150 ease-in-out" />
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Your Email</label>
+                        <input id="email" type="email" name="email" required
+                            class="w-full px-4 py-3 bg-gray-100 text-gray-900 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:bg-white transition duration-150 ease-in-out" />
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                        <textarea id="message" name="message" required rows="5"
+                            class="w-full px-4 py-3 bg-gray-100 text-gray-900 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:bg-white transition duration-150 ease-in-out"></textarea>
+                    </div>
 
-    <!-- Form Inputs. Each input must have a name="" attribute -->
-    <input type="text" placeholder="Your Name" name="name" required class="w-full px-4 py-3 bg-gray-800 text-white border-none !rounded-button focus:ring-2 focus:ring-primary">
-    <input type="email" placeholder="Your Email"name="email" required class="w-full px-4 py-3 bg-gray-800 text-white border-none !rounded-button focus:ring-2 focus:ring-primary">
-    <textarea name="message" placeholder="Your Message" required class="w-full px-4 py-3 bg-gray-800 text-white border-none !rounded-button focus:ring-2 focus:ring-primary"></textarea>
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-    <!-- Honeypot Spam Protection -->
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    <!-- Custom Confirmation / Success Page -->
+                    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
 
-    <!-- Custom Confirmation / Success Page -->
-    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
-
-    <button type="submit" class="bg-primary text-white px-4 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Submit Form</button>
-
-</form>
+                    <button type="submit"
+                        class="w-full bg-primary text-white px-4 py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors whitespace-nowrap shadow">
+                        Submit Form
+                    </button>
+                </form>
             </div>
             <div class="lg:w-1/2">
                 <ul class="space-y-6">
@@ -559,17 +605,20 @@
                 <h3 class="text-xl font-bold mb-6">Tech<span class="text-primary">loop</span></h3>
                 <p class="text-gray-400 mb-6">Empowering rural communities with innovative digital solutions since 2023. We're dedicated to helping you succeed in the digital landscape.</p>
                 <div class="flex space-x-4">
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                    <a href="https://www.facebook.com/profile.php?id=61559012747399" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                         <i class="ri-facebook-fill text-white"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                        <i class="ri-twitter-fill text-white"></i>
+                    <a href="https://x.com/32507techloop?t=PWJ2oW0jZy2MDpsfb45MtA&s=09" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="ri-twitter-x-fill text-white"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                    <a href="https://www.instagram.com/tech_loop_solutions?igsh=Mm54MzZlZ2RsNWJ1" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                         <i class="ri-instagram-fill text-white"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                    <a href="https://www.linkedin.com/company/tech-loop-solutions/" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                         <i class="ri-linkedin-fill text-white"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@colloh_ai?_t=ZM-8wjhKuyGTX6&_r=1" target="_blank"class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="ri-tiktok-line text-white"></i>
                     </a>
                 </div>
             </div>
@@ -577,11 +626,11 @@
             <div>
                 <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
                 <ul class="space-y-3">
-                    <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                    <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-                    <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
-                    <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
-                    <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                    <li><a href="About us.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                    <li><a href="projects.html" class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
                 </ul>
             </div>
             <!-- Contact Info -->
@@ -631,5 +680,23 @@
     </div>
 </footer>
 
+<script>
+  // Hamburger menu toggle
+  const menuBtn = document.getElementById('menuBtn');
+  const mainNav = document.getElementById('mainNav');
+  menuBtn.addEventListener('click', () => {
+    mainNav.classList.toggle('hidden');
+  });
+
+  // Optional: Hide menu when a link is clicked (mobile UX)
+  document.querySelectorAll('#mainNav a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 768) {
+        mainNav.classList.add('hidden');
+      }
+    });
+  });
+</script>
+<!-- ...existing code... -->
 </body>
 </html>

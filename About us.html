@@ -10,6 +10,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
+ <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+
     <!-- Tailwind Config -->
     <script>
         tailwind.config = {
@@ -63,22 +65,24 @@
 </head>
 <body class="min-h-screen bg-white">
 
-<!-- Header -->
+<!-- ...existing code... -->
 <header class="w-full bg-white shadow-sm sticky top-0 z-50">
     <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="#" class="text-2xl font-bold">
-            <span class="text-primary">Tech</span><span class="text-secondary">loop</span>
+        <a href="#" class="text-2xl font-['Pacifico'] text-primary">
+            <span class="text-primary">Tech-</span><span class="text-secondary">loop</span>
         </a>
-        <nav class="hidden md:flex items-center space-x-8">
-            <a href="/" class="text-primary font-medium">Home</a>
-            <a href="/about" class="text-gray-700 hover:text-primary transition-colors">About Us</a>
-            <a href="/services" class="text-gray-700 hover:text-primary transition-colors">Services</a>
-            <a href="/projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
-            <a href="/contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
-        </nav>
-        <div class="md:hidden w-8 h-8 flex items-center justify-center">
+        <!-- Hamburger Button -->
+        <button id="menuBtn" class="md:hidden w-8 h-8 flex items-center justify-center focus:outline-none" aria-label="Open Menu">
             <i class="ri-menu-line ri-lg"></i>
-        </div>
+        </button>
+        <!-- Navigation Links -->
+        <nav id="mainNav" class="hidden md:flex flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none z-50 md:items-center md:space-x-8 space-y-0 md:space-y-0">
+            <a href="index.html" class="block px-6 py-3 text-gray-700 hover:text-primary transition-colors md:inline md:px-0 md:py-0">Home</a>
+            <a href="About us.html" class="block px-6 py-3 text-gray-700 hover:text-primary transition-colors md:inline md:px-0 md:py-0">About Us</a>
+            <a href="services.html" class="block px-6 py-3 text-gray-700 hover:text-primary transition-colors md:inline md:px-0 md:py-0">Services</a>
+            <a href="projects.html" class="block px-6 py-3 text-gray-700 hover:text-primary transition-colors md:inline md:px-0 md:py-0">Projects</a>
+            <a href="contact.html" class="block px-6 py-3 text-gray-700 hover:text-primary transition-colors md:inline md:px-0 md:py-0">Contact</a>
+        </nav>
     </div>
 </header>
 
@@ -95,10 +99,12 @@
 <section id="our-story" class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2">
-                <img src="images/who we are.jpg" alt="Techloop team working with rural youth" class="rounded-lg shadow-lg w-full h-auto object-cover">
+            <div class="md:w-1/2 flex-shrink-0 flex justify-center md:justify-start">
+                <img src="images/who we are.jpg" alt="Techloop team working with rural youth"
+                     class="rounded-lg shadow-lg object-cover w-full h-64 md:h-80 max-w-full"
+                     style="min-width: 0;">
             </div>
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 flex flex-col justify-center">
                 <h2 class="text-3xl font-bold mb-6 gradient-text">Who We Are</h2>
                 <p class="text-gray-700 mb-4">Techloop Solutions is a passionate group of young innovators driven by a shared vision: to empower rural communities through technology.</p>
                 <p class="text-gray-700 mb-6">Based in Murang’a County, we bring together expertise in IT, education, and entrepreneurship to make digital access easy, affordable, and impactful across rural Kenya.</p>
@@ -135,7 +141,7 @@
                 <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                     <i class="ri-wifi-line ri-xl text-primary"></i>
                 </div>
-                <img src="images/Rural Wi-Fi Hotspots.jpg" alt="">
+                <!--<img src="images/Rural Wi-Fi Hotspots.jpg" alt="">-->
                 <h3 class="text-xl font-semibold mb-3">Internet Access</h3>
                 <p class="text-gray-600 mb-4">Affordable hotspot internet services that connect homes, schools, and businesses in areas with limited or no connectivity.</p>
             </div>
@@ -236,17 +242,20 @@
                 <h3 class="text-xl font-bold mb-6">Tech<span class="text-primary">loop</span></h3>
                 <p class="text-gray-400 mb-6">Empowering rural communities with innovative digital solutions since 2023. We're dedicated to helping you succeed in the digital landscape.</p>
                 <div class="flex space-x-4">
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                    <a href="https://www.facebook.com/profile.php?id=61559012747399" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                         <i class="ri-facebook-fill text-white"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                    <a href="https://x.com/32507techloop?t=PWJ2oW0jZy2MDpsfb45MtA&s=09" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                         <i class="ri-twitter-fill text-white"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                    <a href="https://www.instagram.com/tech_loop_solutions?igsh=Mm54MzZlZ2RsNWJ1" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                         <i class="ri-instagram-fill text-white"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                    <a href="https://www.linkedin.com/company/tech-loop-solutions/" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                         <i class="ri-linkedin-fill text-white"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@colloh_ai?_t=ZM-8wjhKuyGTX6&_r=1" target="_blank"class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="ri-tiktok-line text-white"></i>
                     </a>
                 </div>
             </div>
@@ -254,11 +263,11 @@
             <div>
                 <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
                 <ul class="space-y-3">
-                    <li><a href="/" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                    <li><a href="/about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-                    <li><a href="/services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
-                    <li><a href="/projects" class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
-                    <li><a href="/contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                    <li><a href="About us.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                    <li><a href="projects.html" class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
                 </ul>
             </div>
             <!-- Contact Info -->
@@ -275,13 +284,13 @@
                         <span class="w-5 h-5 flex items-center justify-center mr-3">
                             <i class="ri-phone-line text-primary"></i>
                         </span>
-                        <span class="text-gray-400">+254 700 000 000</span>
+                        <span class="text-gray-400">+254 769 535 647</span>
                     </li>
                     <li class="flex items-center">
                         <span class="w-5 h-5 flex items-center justify-center mr-3">
                             <i class="ri-mail-line text-primary"></i>
                         </span>
-                        <span class="tex   t-gray-400">info@techloopsolutions.co.ke</span>
+                        <span class="tex   t-gray-400">techloopsolutions2025@gmail.com</span>
                     </li>
                 </ul>
             </div>
@@ -305,6 +314,24 @@
         </div>
     </div>
 </footer>
+<script>
+  // Hamburger menu toggle
+  const menuBtn = document.getElementById('menuBtn');
+  const mainNav = document.getElementById('mainNav');
+  menuBtn.addEventListener('click', () => {
+    mainNav.classList.toggle('hidden');
+  });
+
+  // Optional: Hide menu when a link is clicked (mobile UX)
+  document.querySelectorAll('#mainNav a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 768) {
+        mainNav.classList.add('hidden');
+      }
+    });
+  });
+</script>
+<!-- ...existing code... -->
 
 </body>
 </html>
